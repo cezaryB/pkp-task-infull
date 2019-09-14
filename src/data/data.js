@@ -1,7 +1,7 @@
 export const data = {
   lines: [
-    { latitude: 21.003181, longitude: 52.228798 },
-    { latitude: 21.052097, longitude: 52.25178 },
+    { latitude: 21.003181, longitude: 52.228798, name: 'Warszawa Centralna', desc: 'Lorem Ipsum' },
+    { latitude: 21.052097, longitude: 52.25178, name: 'Warszawa Wschodnia', desc: 'Lorem Ipsum' },
     { latitude: 20.94043, longitude: 52.401687 },
     { latitude: 20.697362, longitude: 52.441667 },
     { latitude: 20.764222, longitude: 52.666122 },
