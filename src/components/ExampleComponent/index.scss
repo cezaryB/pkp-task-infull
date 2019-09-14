@@ -1,0 +1,15 @@
+.main-container {
+  border: 1px solid red;
+
+  &__header {
+    color: blue;
+  }
+
+  &__paragraph {
+    color: red;
+
+    &--green {
+      color: green;
+    }
+  }
+}
