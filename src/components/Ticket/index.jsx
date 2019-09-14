@@ -19,13 +19,19 @@ class Ticket extends React.Component {
             markerSelected={false}
             closeModal={() => this.setState({ modalVisible: false })}
           >
-            <div>
-              <h1>Witaj na pokladzie pociągu PKP</h1>
-              <h2>Twoja podróż:</h2>
+            <div className='modal__ticket'>
+              <h1>
+                Witaj na pokladzie pociągu PKP Intercity
+              </h1>
+              <h2 className='modal__ticket-header'>
+                Twoja podróż:
+              </h2>
               <p>
                 {ticket.origin} do {ticket.destination}
               </p>
-              <p>Życzymy miłej podróży</p>
+              <p>
+                Życzymy miłej podróży
+              </p>
             </div>
           </Modal>
         )}

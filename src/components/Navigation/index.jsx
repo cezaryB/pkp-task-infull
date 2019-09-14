@@ -7,6 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AccessibleIcon from '@material-ui/icons/Accessible';
+import PersonIcon from '@material-ui/icons/Person';
 import InfoIcon from '@material-ui/icons/Info';
 import CallIcon from '@material-ui/icons/Call';
 import Logo from '../Logo';
@@ -42,7 +43,7 @@ const StyledMenuItem = withStyles(theme => ({
   },
 }))(MenuItem);
 
-export default function CustomizedMenus({ fixedPosition, mapScreen }) {
+export default function CustomizedMenus({ fixedPosition, showProfile }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   function handleClick(event) {
@@ -51,6 +52,11 @@ export default function CustomizedMenus({ fixedPosition, mapScreen }) {
 
   function handleClose() {
     setAnchorEl(null);
+  }
+
+  function handleShowProfile() {
+    showProfile();
+    handleClose();
   }
 
   // to do: change menu items depending on the screen
@@ -87,12 +93,20 @@ export default function CustomizedMenus({ fixedPosition, mapScreen }) {
           </ListItemIcon>
           <ListItemText primary="Get help" />
         </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <InfoIcon />
-          </ListItemIcon>
-          <ListItemText primary="Info" />
-        </StyledMenuItem>
+        {!fixedPosition ?
+          <StyledMenuItem>
+            <ListItemIcon>
+              <InfoIcon />
+            </ListItemIcon>
+            <ListItemText primary="Info" />
+          </StyledMenuItem> :
+          <StyledMenuItem onClick={handleShowProfile}>
+            <ListItemIcon>
+              <PersonIcon />
+            </ListItemIcon>
+            <ListItemText primary="Profil" />
+          </StyledMenuItem>
+        }
       </StyledMenu>
     </div>
   );
