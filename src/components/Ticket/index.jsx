@@ -6,7 +6,10 @@ class Ticket extends React.Component {
     modalVisible: true,
     ticket: {
       origin: "Warszawa Centralna",
-      destination: "Gdynia Główna"
+      destination: "Gdynia Główna",
+      user: {
+        name: "Cezary Burzykowski"
+      }
     }
   };
 

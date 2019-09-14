@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import dotenv, { SuperAgent } from 'dotenv';
+import dotenv from 'dotenv';
 import App from './App.jsx';
 
 dotenv.config();

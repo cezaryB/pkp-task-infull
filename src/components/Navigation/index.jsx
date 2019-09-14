@@ -72,7 +72,7 @@ export default function CustomizedMenus({ fixedPosition, showProfile }) {
         onClick={handleClick}
         style={{ backgroundColor: '#263761' }}
       >
-        See more
+        Więcej
       </Button>
       <StyledMenu
         id="customized-menu"
@@ -85,13 +85,13 @@ export default function CustomizedMenus({ fixedPosition, showProfile }) {
           <ListItemIcon>
             <AccessibleIcon />
           </ListItemIcon>
-          <ListItemText primary="Accessibility" />
+          <ListItemText primary="Dostępność" />
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemIcon>
             <CallIcon />
           </ListItemIcon>
-          <ListItemText primary="Get help" />
+          <ListItemText primary="Pomoc" />
         </StyledMenuItem>
         {!fixedPosition ?
           <StyledMenuItem>
