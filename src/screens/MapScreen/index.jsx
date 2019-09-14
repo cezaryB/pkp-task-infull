@@ -1,6 +1,7 @@
 import React from "react";
 import Map from "../../components/Map";
 import Zip from "../../components/Zip";
+import Navigation from '../../components/Navigation';
 
 // Points on map data
 import { data } from "../../data/data";
@@ -16,6 +17,7 @@ const MapScreen = props => {
 
   return (
     <div className="map-container">
+      <Navigation fixedPosition />
       <Map pointerPosition={pointerPosition} />
       <Zip handleCurrentPosition={handleCurrentPosition} />
     </div>

@@ -42,7 +42,7 @@ const StyledMenuItem = withStyles(theme => ({
   },
 }))(MenuItem);
 
-export default function CustomizedMenus() {
+export default function CustomizedMenus({ fixedPosition, mapScreen }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   function handleClick(event) {
@@ -53,8 +53,10 @@ export default function CustomizedMenus() {
     setAnchorEl(null);
   }
 
+  // to do: change menu items depending on the screen
+
   return (
-    <div className='navigation'>
+    <div className={[fixedPosition ? 'navigation navigation--fixed' : 'navigation']}>
       <Logo />
       <Button
         aria-controls="customized-menu"
