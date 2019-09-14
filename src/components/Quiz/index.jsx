@@ -5,14 +5,12 @@ import Button from "@material-ui/core/Button";
 // Delete after passing in props
 import { data } from "../../data/data";
 
-const Quiz = props => {
+const Quiz = ({ data, handleExitQuizModal, handleQuizPoints }) => {
   const [results, setShowResults] = React.useState(false);
   const [questionNumber, setQuestionNumber] = React.useState(0);
   const [points, setPoints] = React.useState(0);
-  const { question, answers, correctAnswer } = data.points[0].quiz[
-    questionNumber
-  ];
-  const questionsLength = data.points[0].quiz.length;
+  const { question, answers, correctAnswer } = data[questionNumber];
+  const questionsLength = data.length;
 
   const handleClick = (answer, correctAnswer) => () => {
     if (results) {
@@ -27,8 +25,8 @@ const Quiz = props => {
   };
 
   const handleSendResults = () => {
-    console.log("zdobyte punkty: ", points);
-    // Tutaj funkcja z propsow do przekazania punktow komponentowi wyzej
+    handleQuizPoints(points);
+    handleExitQuizModal();
   };
 
   const handleNextQuestion = () => {
@@ -47,7 +45,7 @@ const Quiz = props => {
       <div className="quiz_question">{question}</div>
       <div className="quiz_answers">
         {answers.map(answer => (
-          <div className="quiz_answer">
+          <div className="quiz_answer" key={answer.id}>
             <Button
               variant="contained"
               color={"primary"}
@@ -66,20 +64,27 @@ const Quiz = props => {
       </div>
       <div className="quiz_buttons-container">
         {questionNumber !== questionsLength - 1 ? (
-          <Button
-            variant="contained"
-            disabled={!results}
-            onClick={handleNextQuestion}
-          >
-            NASTĘPNE PYTANIE
-          </Button>
+          <React.Fragment>
+            <Button
+              variant="contained"
+              disabled={!results}
+              onClick={handleNextQuestion}
+            >
+              NASTĘPNE PYTANIE
+            </Button>
+            <div className="quiz_button--close">
+              <Button variant="contained" onClick={handleExitQuizModal}>
+                ZAMKNIJ
+              </Button>
+            </div>
+          </React.Fragment>
         ) : (
           <Button
             variant="contained"
             onClick={handleSendResults}
             disabled={!results}
           >
-            ZAKOŃCZ
+            ZAPISZ WYNIKI
           </Button>
         )}
       </div>
