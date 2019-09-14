@@ -19,6 +19,18 @@
     margin: 20px 0;
   }
 
+  &__content {
+    height: 100%;
+  }
+
+  &__ticket {
+    margin-bottom: 50%;
+  }
+
+  &__ticket-header {
+    margin-top: 40px;
+  }
+
   &__controls {
     display: flex;
 
