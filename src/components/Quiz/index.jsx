@@ -2,9 +2,6 @@ import React from "react";
 import "./index.scss";
 import Button from "@material-ui/core/Button";
 
-// Delete after passing in props
-import { data } from "../../data/data";
-
 const Quiz = ({ data, handleExitQuizModal, handleQuizPoints }) => {
   const [results, setShowResults] = React.useState(false);
   const [questionNumber, setQuestionNumber] = React.useState(0);

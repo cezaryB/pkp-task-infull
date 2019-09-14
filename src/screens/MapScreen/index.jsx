@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Map from "../../components/Map";
 import Zip from "../../components/Zip";
 import Navigation from "../../components/Navigation";

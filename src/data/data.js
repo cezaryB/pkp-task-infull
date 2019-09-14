@@ -31,30 +31,12 @@ export const data = {
   },
   points: [
     {
-      name: "Miejski Ogród Zoologiczny w Warszawie",
-      img: "https://imgur.com/hCICD3Q",
-      description: `Ogród zoologiczny znajdujący się przy ul. Ratuszowej 1/3 w dzielnicy Praga-Północ w Warszawie.
-
-Został otwarty w 1928. Początkowo zajmował powierzchnię 12 ha i posiadał ok. 500 okazów zwierząt. Obecnie jego powierzchnia wynosi ponad 39 ha.
-
-Ważniejsze obiekty i ich fauna
-Słoniarnia
-Jedna z najnowocześniejszych w Europie, 6000 m². Na rok 2012 zoo zamieszkiwały cztery słonie afrykańskie – jeden samiec i trzy samice. W wewnętrznej części słoniarni znajduje się również wydzielona część dla góralków przylądkowych
-
-Ptaszarnia
-Obejmuje halę wolnych lotów. Jednymi z prezentowanych gatunków są wymarłe na wolności szpak balijski i gołębiak kasztanowaty. Prócz tego w ptaszarni przebywają dwie pary korońca plamoczubego, bezszpony, turkuśniki indyjskie, bilbil zbroczony, wyspiarek zbroczony , turak fioletowy i kea.
-
-Herpetarium
-Nowoczesna ekspozycja gadów. Budynek oddano do użytku w 1997 r. Posiada przeszklone ściany celem nasłonecznienia wnętrza.W 2014 do pomieszczenia przyjechał osobnik poskoczka mułowego. Do okazów należą m.in.:
-
-krokodyle: syjamski , kubański oraz krótkopyski
-żółwie: orlicja, żabuti czarny i żółw annamski 
-węże: pyton zielony, Sanzinia madagascariensis, rogowąż oraz jedyny jadowity gatunek w Zoo – grzechotnik straszliwy
-płazy: żaba pomidorowa, australorzekotka szmaragdowa, drzewołaz niebieski, drzewołaz żółtopasy
-
-Żyrafiarnia i małpiarnia
-Zewnętrzny wybieg żyraf nieogrodzony jest siatką, natomiast otacza go fosa. Wewnątrz żyrafiarni znajdują się również miejsca dla małp. Są to pigmejka karłowata, marmozeta zwyczajna, tamaryna białoczuba, kapucynka Cebus xanthosternos i pawian płaszczowy. Wybiegi posiadają część zewnętrzną`,
-      coordinates: [52.258074, 21.021649],
+      name: "Zespół Stacji Filtrów w Warszawie",
+      img: "https://imgur.com/kvT8aVj",
+      description: `Filtry wody znajdujące się przy ul. Koszykowej 81. Zajmują teren między ulicami: Koszykową, Krzywickiego, Filtrową i Raszyńską.
+    Zespół jest częścią systemu wodociągów warszawskich wybudowanych w latach 1883–1886 z inicjatywy prezydenta miasta Sokratesa Starynkiewicza według projektu Williama Lindleya i Williama Heerleina Lindleya. W kolejnych latach został on rozbudowywany i uzupełniony o nowe obiekty. Obecnie jest częścią Zakładu Centralnego Miejskiego Przedsiębiorstwa Wodociągów i Kanalizacji.
+    W latach 1973 i 2008 większość obiektów znajdujących się na terenie Zespołu Stacji Filtrów została wpisana do rejestru zabytków. W 2012 cały kompleks został uznany za pomnik historii.`,
+      coordinates: [52.221602, 20.995342],
       quiz: [
         {
           id: 0,
@@ -105,13 +87,30 @@ Zewnętrzny wybieg żyraf nieogrodzony jest siatką, natomiast otacza go fosa. W
       ]
     },
     {
-      name: "Legionowo",
-      img: "https://imgur.com/DFXXxl2",
-      description: `Historia Legionowa rozpoczyna się w XIX w. W 1877 na terenie ówczesnych dóbr hr. Potockiego powstała stacja Kolei Nadwiślańskiej Jabłonna. W tym miejscu trasa kolei przecinała się z jedną z pierwszych dróg bitych na ziemiach Polski – Traktem Kowieńskim. W ciągu kolejnych kilku lat, przy stacji kolejowej, hrabia August Potocki założył letnisko zwane od jego imienia Gucinem (hrabiego potocznie nazywano Guciem). Dawne letnisko to teraz sam środek Legionowa pomiędzy ulicą Piłsudskiego a Warszawską. Z tego też okresu pochodzą inne nazwy związane z Legionowem: Bukowiec (wówczas gajówka), Kozłówka i Ludwisin (dwa folwarki). Teraz są to dzielnice miasta.
-W 1892 także przy stacji, ale po drugiej stronie torów, powstał carski garnizon wojskowy. To on wyznaczał dalsze dzieje Legionowa. W 1898 w Jabłonnie powstał Oddział Balonowy Warszawskiego Rejonu Fortecznego. Zapoczątkowana przez Rosjan tradycja baloniarstwa przetrwała w Legionowie prawie do końca XX wieku. Legionowscy oficerowie na balonach „Kościuszko” i „Polonia II” czterokrotnie triumfowali w międzynarodowych zawodach o Puchar Gordona Bennetta.
-W 1897 powstała Huta Szkła „Jabłonna”.
-Jabłonna i Legionowo stały się jednymi z ważniejszych obszarów stacjonowania rosyjskich żołnierzy po 1 sierpnia 1914 (od rozpoczęcia I wojny światowej). Carski garnizon został zlikwidowany w 1915 roku, kiedy do osady wkroczyli Niemcy. 14 listopada 1918 po raz pierwszy od 27 lat w koszarach zamieszkała polska załoga. 3 maja 1919 oficjalnie nadano osadzie nazwę Legionowo.`,
-      coordinates: [52.407125, 20.938933],
+      name: "Miejski Ogród Zoologiczny w Warszawie",
+      img: "https://imgur.com/hCICD3Q",
+      description: `Ogród zoologiczny znajdujący się przy ul. Ratuszowej 1/3 w dzielnicy Praga-Północ w Warszawie.
+
+Został otwarty w 1928. Początkowo zajmował powierzchnię 12 ha i posiadał ok. 500 okazów zwierząt. Obecnie jego powierzchnia wynosi ponad 39 ha.
+
+Ważniejsze obiekty i ich fauna
+Słoniarnia
+Jedna z najnowocześniejszych w Europie, 6000 m². Na rok 2012 zoo zamieszkiwały cztery słonie afrykańskie – jeden samiec i trzy samice. W wewnętrznej części słoniarni znajduje się również wydzielona część dla góralków przylądkowych
+
+Ptaszarnia
+Obejmuje halę wolnych lotów. Jednymi z prezentowanych gatunków są wymarłe na wolności szpak balijski i gołębiak kasztanowaty. Prócz tego w ptaszarni przebywają dwie pary korońca plamoczubego, bezszpony, turkuśniki indyjskie, bilbil zbroczony, wyspiarek zbroczony , turak fioletowy i kea.
+
+Herpetarium
+Nowoczesna ekspozycja gadów. Budynek oddano do użytku w 1997 r. Posiada przeszklone ściany celem nasłonecznienia wnętrza.W 2014 do pomieszczenia przyjechał osobnik poskoczka mułowego. Do okazów należą m.in.:
+
+krokodyle: syjamski , kubański oraz krótkopyski
+żółwie: orlicja, żabuti czarny i żółw annamski 
+węże: pyton zielony, Sanzinia madagascariensis, rogowąż oraz jedyny jadowity gatunek w Zoo – grzechotnik straszliwy
+płazy: żaba pomidorowa, australorzekotka szmaragdowa, drzewołaz niebieski, drzewołaz żółtopasy
+
+Żyrafiarnia i małpiarnia
+Zewnętrzny wybieg żyraf nieogrodzony jest siatką, natomiast otacza go fosa. Wewnątrz żyrafiarni znajdują się również miejsca dla małp. Są to pigmejka karłowata, marmozeta zwyczajna, tamaryna białoczuba, kapucynka Cebus xanthosternos i pawian płaszczowy. Wybiegi posiadają część zewnętrzną`,
+      coordinates: [52.258074, 21.021649],
       quiz: [
         {
           id: 0,
@@ -162,11 +161,13 @@ Jabłonna i Legionowo stały się jednymi z ważniejszych obszarów stacjonowani
       ]
     },
     {
-      name: "Twierdza Modlin",
-      img: "https://imgur.com/twvjbAn",
-      description: `
-	W 1807 rozpoczęła się, z rozkazu Napoleona Bonaparte, budowa Twierdzy Modlin, od 1810 budowana była już nie jako magazyn żywności, ale obóz warowny. Nadzór nad budową objął, w miejsce generała Prospera de Chasseloup-Laubat, Jean Mallet de Granville (w 1811 w pracy przy budowie zatrudnionych jest 19 000 ludzi). Od 5 lutego 1813 do 1 grudnia 1813 w oblężonej przez Rosjan twierdzy Modlin bronili się Francuzi. W związku z budową twierdzy nastąpiło ożywienie gospodarcze miasta Nowy Dwór i w 1820 stał się on miastem rządowym oraz otrzymał prawo do organizowania jarmarków. W tym okresie zaczęły powstawać tu szynki i karczmy oraz rozpoczął się napływ ludności niemieckiej, rosyjskiej i żydowskiej.`,
-      coordinates: [52.439665, 20.674136],
+      name: "Legionowo",
+      img: "https://imgur.com/DFXXxl2",
+      description: `Historia Legionowa rozpoczyna się w XIX w. W 1877 na terenie ówczesnych dóbr hr. Potockiego powstała stacja Kolei Nadwiślańskiej Jabłonna. W tym miejscu trasa kolei przecinała się z jedną z pierwszych dróg bitych na ziemiach Polski – Traktem Kowieńskim. W ciągu kolejnych kilku lat, przy stacji kolejowej, hrabia August Potocki założył letnisko zwane od jego imienia Gucinem (hrabiego potocznie nazywano Guciem). Dawne letnisko to teraz sam środek Legionowa pomiędzy ulicą Piłsudskiego a Warszawską. Z tego też okresu pochodzą inne nazwy związane z Legionowem: Bukowiec (wówczas gajówka), Kozłówka i Ludwisin (dwa folwarki). Teraz są to dzielnice miasta.
+W 1892 także przy stacji, ale po drugiej stronie torów, powstał carski garnizon wojskowy. To on wyznaczał dalsze dzieje Legionowa. W 1898 w Jabłonnie powstał Oddział Balonowy Warszawskiego Rejonu Fortecznego. Zapoczątkowana przez Rosjan tradycja baloniarstwa przetrwała w Legionowie prawie do końca XX wieku. Legionowscy oficerowie na balonach „Kościuszko” i „Polonia II” czterokrotnie triumfowali w międzynarodowych zawodach o Puchar Gordona Bennetta.
+W 1897 powstała Huta Szkła „Jabłonna”.
+Jabłonna i Legionowo stały się jednymi z ważniejszych obszarów stacjonowania rosyjskich żołnierzy po 1 sierpnia 1914 (od rozpoczęcia I wojny światowej). Carski garnizon został zlikwidowany w 1915 roku, kiedy do osady wkroczyli Niemcy. 14 listopada 1918 po raz pierwszy od 27 lat w koszarach zamieszkała polska załoga. 3 maja 1919 oficjalnie nadano osadzie nazwę Legionowo.`,
+      coordinates: [52.407125, 20.938933],
       quiz: [
         {
           id: 0,
@@ -180,7 +181,8 @@ Jabłonna i Legionowo stały się jednymi z ważniejszych obszarów stacjonowani
         },
         {
           id: 1,
-          question: "Jaki kluczowy dla historii miasta budynek powstał w 1892r.?",
+          question:
+            "Jaki kluczowy dla historii miasta budynek powstał w 1892r.?",
           answers: [
             { id: 0, label: "Garnizon", value: "A" },
             {
@@ -215,6 +217,13 @@ Jabłonna i Legionowo stały się jednymi z ważniejszych obszarów stacjonowani
           correctAnswer: "A"
         }
       ]
+    },
+    {
+      name: "Twierdza Modlin",
+      img: "https://imgur.com/twvjbAn",
+      description: `
+	W 1807 rozpoczęła się, z rozkazu Napoleona Bonaparte, budowa Twierdzy Modlin, od 1810 budowana była już nie jako magazyn żywności, ale obóz warowny. Nadzór nad budową objął, w miejsce generała Prospera de Chasseloup-Laubat, Jean Mallet de Granville (w 1811 w pracy przy budowie zatrudnionych jest 19 000 ludzi). Od 5 lutego 1813 do 1 grudnia 1813 w oblężonej przez Rosjan twierdzy Modlin bronili się Francuzi. W związku z budową twierdzy nastąpiło ożywienie gospodarcze miasta Nowy Dwór i w 1820 stał się on miastem rządowym oraz otrzymał prawo do organizowania jarmarków. W tym okresie zaczęły powstawać tu szynki i karczmy oraz rozpoczął się napływ ludności niemieckiej, rosyjskiej i żydowskiej.`,
+      coordinates: [52.439665, 20.674136]
     },
     {
       name: "Pułtusk",
