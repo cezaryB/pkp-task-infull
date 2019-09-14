@@ -18,10 +18,6 @@ class LocationService {
       }
     });
   }
-
-  getWarsawLocation() {
-    return [21.0122, 52.2297]
-  }
 }
 
 export default new LocationService()

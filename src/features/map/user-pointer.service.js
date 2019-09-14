@@ -1,13 +1,13 @@
-import { first } from "rxjs/operators";
 import { of } from "rxjs";
-import locationService from "./location.service";
+import { first } from "rxjs/operators";
+import { data } from "../../data/data";
 
 class UserPointerService {
   async addUserPointerToMap(map) {
     const pulsingDot = this.getPointer(map);
     map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
     // ToDO change location
-    of(locationService.getWarsawLocation())
+    of(data.locations.Warsaw)
       .pipe(first())
       .subscribe(coordinates => {
         map.addLayer({
@@ -33,7 +33,7 @@ class UserPointerService {
           }
         });
 
-        of(locationService.getWarsawLocation()).subscribe(coordinates => {
+        of(data.locations.Warsaw).subscribe(coordinates => {
           this.movePointer(map, coordinates);
         });
       });

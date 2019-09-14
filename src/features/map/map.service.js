@@ -1,17 +1,17 @@
 import * as mapboxgl from "mapbox-gl";
 import { first, map } from "rxjs/operators";
 import { of } from "rxjs";
-import locationService from "./location.service";
 import pointsService from "./points.service";
 import userPointerService from "./user-pointer.service";
 import lineService from "./line.service";
+import { data } from "../../data/data";
 
 class MapboxService {
   async bootstrapMap() {
     mapboxgl.accessToken =
       "pk.eyJ1Ijoic2lrb3JhMDAiLCJhIjoiY2swaHN3Z2duMDA1dTNlcDk3Y3p5cjNmNCJ9.5hTW49VqwphtDGMdE-SwEg";
 
-    return of(locationService.getWarsawLocation())
+    return of(data.locations.Warsaw)
       .pipe(
         first(),
         map(center => {
