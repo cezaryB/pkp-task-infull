@@ -22,6 +22,7 @@ class MapboxService {
             zoom: 9
           });
           map.on("load", async () => {
+            this.addCustomSkin(map);
             pointsService.addPlacesToMap(map);
             lineService.addLines(map);
             await userPointerService.addUserPointerToMap(map);
@@ -30,6 +31,39 @@ class MapboxService {
         })
       )
       .toPromise();
+  }
+
+  addCustomSkin(map) {
+    var layers = map.getStyle().layers;
+    // Find the index of the first symbol layer in the map style
+    var firstSymbolId;
+    for (var i = 0; i < layers.length; i++) {
+      if (layers[i].type === "symbol") {
+        firstSymbolId = layers[i].id;
+        break;
+      }
+    }
+    map.addSource("skin", {
+      type: "image",
+      url: "/map.png",
+      coordinates: [
+        [17.073222, 54.860303],
+        [19.411032, 54.860303],
+        [19.411032, 53.88732],
+        [17.073222, 53.88732]
+      ]
+    });
+    map.addLayer(
+      {
+        id: "radar-layer",
+        type: "raster",
+        source: "skin",
+        paint: {
+          "raster-fade-duration": 0
+        }
+      },
+      firstSymbolId
+    );
   }
 
   // Add zoom and rotation controls to the map.
