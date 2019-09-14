@@ -54,7 +54,55 @@ płazy: żaba pomidorowa, australorzekotka szmaragdowa, drzewołaz niebieski, dr
 
 Żyrafiarnia i małpiarnia
 Zewnętrzny wybieg żyraf nieogrodzony jest siatką, natomiast otacza go fosa. Wewnątrz żyrafiarni znajdują się również miejsca dla małp. Są to pigmejka karłowata, marmozeta zwyczajna, tamaryna białoczuba, kapucynka Cebus xanthosternos i pawian płaszczowy. Wybiegi posiadają część zewnętrzną`,
-      coordinates: [52.258074, 21.021649]
+      coordinates: [52.258074, 21.021649],
+      quiz: [
+        {
+          id: 0,
+          question: "Przy jakiej ulicy znajdują się Filtry?",
+          answers: [
+            { id: 0, label: "Koszykowej", value: "A" },
+            { id: 1, label: "Obiego-Wana Kenobiego", value: "B" },
+            { id: 2, label: "Filtrowej", value: "C" }
+          ],
+          correctAnswer: "A"
+        },
+        {
+          id: 1,
+          question: "Kto zaprojektował Filtry?",
+          answers: [
+            { id: 0, label: "Orville Wright i Wilbur Wright", value: "A" },
+            {
+              id: 1,
+              label: "Wilhelm Karl Grimm i Jacob Ludwig Karl Grimm",
+              value: "B"
+            },
+            {
+              id: 2,
+              label: "William Lindley i William Heerlein Lindley",
+              value: "C"
+            }
+          ],
+          correctAnswer: "C"
+        },
+        {
+          id: 2,
+          question: "Ile lat trwała budowa Filtrów Warszawskich?",
+          answers: [
+            { id: 0, label: "Rok", value: "A" },
+            {
+              id: 1,
+              label: "Pięć lat",
+              value: "B"
+            },
+            {
+              id: 2,
+              label: "Trzy lata",
+              value: "C"
+            }
+          ],
+          correctAnswer: "C"
+        }
+      ]
     },
     {
       name: "Legionowo",
@@ -63,14 +111,110 @@ Zewnętrzny wybieg żyraf nieogrodzony jest siatką, natomiast otacza go fosa. W
 W 1892 także przy stacji, ale po drugiej stronie torów, powstał carski garnizon wojskowy. To on wyznaczał dalsze dzieje Legionowa. W 1898 w Jabłonnie powstał Oddział Balonowy Warszawskiego Rejonu Fortecznego. Zapoczątkowana przez Rosjan tradycja baloniarstwa przetrwała w Legionowie prawie do końca XX wieku. Legionowscy oficerowie na balonach „Kościuszko” i „Polonia II” czterokrotnie triumfowali w międzynarodowych zawodach o Puchar Gordona Bennetta.
 W 1897 powstała Huta Szkła „Jabłonna”.
 Jabłonna i Legionowo stały się jednymi z ważniejszych obszarów stacjonowania rosyjskich żołnierzy po 1 sierpnia 1914 (od rozpoczęcia I wojny światowej). Carski garnizon został zlikwidowany w 1915 roku, kiedy do osady wkroczyli Niemcy. 14 listopada 1918 po raz pierwszy od 27 lat w koszarach zamieszkała polska załoga. 3 maja 1919 oficjalnie nadano osadzie nazwę Legionowo.`,
-      coordinates: [52.407125, 20.938933]
+      coordinates: [52.407125, 20.938933],
+      quiz: [
+        {
+          id: 0,
+          question: "Jaka jest obecnie powierzchnia ogrodu Zoologicznego?",
+          answers: [
+            { id: 0, label: "3ha", value: "A" },
+            { id: 1, label: "39ha", value: "B" },
+            { id: 2, label: "420ha", value: "C" }
+          ],
+          correctAnswer: "B"
+        },
+        {
+          id: 1,
+          question: "Jaki jadowity wąż znajduje się w ogrodzie zoologicznym?",
+          answers: [
+            { id: 0, label: "Fikus", value: "A" },
+            {
+              id: 1,
+              label: "Grzechotnik straszliwy",
+              value: "B"
+            },
+            {
+              id: 2,
+              label: "Kobra czarnoszyja",
+              value: "C"
+            }
+          ],
+          correctAnswer: "B"
+        },
+        {
+          id: 2,
+          question: "Jakich zwierząt nie uświadczymy w ogrodzie zoologicznym?",
+          answers: [
+            { id: 0, label: "Żyrafy", value: "A" },
+            {
+              id: 1,
+              label: "Węzy",
+              value: "B"
+            },
+            {
+              id: 2,
+              label: "Dinazaurów",
+              value: "C"
+            }
+          ],
+          correctAnswer: "C"
+        }
+      ]
     },
     {
       name: "Twierdza Modlin",
       img: "https://imgur.com/twvjbAn",
       description: `
 	W 1807 rozpoczęła się, z rozkazu Napoleona Bonaparte, budowa Twierdzy Modlin, od 1810 budowana była już nie jako magazyn żywności, ale obóz warowny. Nadzór nad budową objął, w miejsce generała Prospera de Chasseloup-Laubat, Jean Mallet de Granville (w 1811 w pracy przy budowie zatrudnionych jest 19 000 ludzi). Od 5 lutego 1813 do 1 grudnia 1813 w oblężonej przez Rosjan twierdzy Modlin bronili się Francuzi. W związku z budową twierdzy nastąpiło ożywienie gospodarcze miasta Nowy Dwór i w 1820 stał się on miastem rządowym oraz otrzymał prawo do organizowania jarmarków. W tym okresie zaczęły powstawać tu szynki i karczmy oraz rozpoczął się napływ ludności niemieckiej, rosyjskiej i żydowskiej.`,
-      coordinates: [52.439665, 20.674136]
+      coordinates: [52.439665, 20.674136],
+      quiz: [
+        {
+          id: 0,
+          question: "W którym wieku powstało Legionowo?",
+          answers: [
+            { id: 0, label: "XX", value: "A" },
+            { id: 1, label: "XIX", value: "B" },
+            { id: 2, label: "XVIII", value: "C" }
+          ],
+          correctAnswer: "B"
+        },
+        {
+          id: 1,
+          question: "Jaki kluczowy dla historii miasta budynek powstał w 1892r.?",
+          answers: [
+            { id: 0, label: "Garnizon", value: "A" },
+            {
+              id: 1,
+              label: "Ogród zoologiczny",
+              value: "B"
+            },
+            {
+              id: 2,
+              label: "Stacja bojowa międzygalaktycznego ruchu oporu",
+              value: "C"
+            }
+          ],
+          correctAnswer: "A"
+        },
+        {
+          id: 2,
+          question: "W którym roku w koszarach zamieszkała polska załoga?",
+          answers: [
+            { id: 0, label: "1918", value: "A" },
+            {
+              id: 1,
+              label: "1939",
+              value: "B"
+            },
+            {
+              id: 2,
+              label: "2019",
+              value: "C"
+            }
+          ],
+          correctAnswer: "A"
+        }
+      ]
     },
     {
       name: "Pułtusk",
@@ -235,7 +379,7 @@ Solidarność Walcząca współpracowała m.in. z Ogólnopolskim Komitetem Oporu
 
 W falowcu do części mieszkań (ok. 2 na piętro) wchodzi się z klatek schodowych, do pozostałych (ok. 10 na piętro) wchodzi się z otwartych korytarzy (galerii, z budowy przypominających balkon), które łączą sąsiadujące ze sobą klatki (przeszklone od frontów). Na początku użytkowania budynku z każdej klatki bloku można było, idąc galerią, przejść do klatki sąsiadującej. Z czasem, ze względów bezpieczeństwa, większość z przejść została przez lokatorów pięter zamknięta dodatkowymi drzwiami i domofonem z obu stron. Na wysokości niektórych mieszkań galerie zostały częściowo zabudowane tworząc dodatkowe niewielkie pomieszczenia dla lokatorów (w większości niezgodnie z przepisami; część z tych zabudów posiada z jednej strony ściany uniemożliwiające pozostałym mieszkańcom przejście przez galerię do klatki sąsiedniej, co odcina też jedną z dwóch dróg ewakuacyjnych). Wszystkie klatki zaopatrzone są w windy, z czego w co czwartej znajduje się dodatkowa większa tak zwana winda towarowa (mająca większy udźwig i nieco szersza). Do niedawna zauważalne były też zmiany technologiczne, które nastąpiły w trakcie budowy bloku – starsze klatki posiadały windy, które zatrzymywały się co 2-3 piętra, w nowszych winda dojeżdżała do piętra 9, w tych zbudowanych najpóźniej – do piętra 10 (nadbudówki tych klatek posiadają wyższy, skośny dach). Obecnie wszystkie windy zmodernizowano, nie zmieniono jednak najwyższych pięter do których docierają. W każdym falowcu można wyróżnić dwa typy mieszkań dostępnych z galerii – większe, z dwoma podłużnymi pokojami od strony balkonu, oraz kuchnią od strony galerii, oraz mniejsze – z jednym pokojem od strony balkonów, małym pokojem i kuchnią od strony galerii. Mieszkania dostępne z klatek schodowych posiadają natomiast nawet do 4 pokojów, a ich rozkład zależy od klatki i okresu w jakim były budowane. Wszystkie falowce w Polsce posiadają wejścia do klatek od frontu. Balkony znajdują się wyłącznie na tylnych ścianach, wszystkie falowce skierowane są balkonami na południe, każde mieszkanie posiada balkon.
 `,
-      coordinates: [54.410585, 18.592430]
+      coordinates: [54.410585, 18.59243]
     },
     {
       name: "Jelitkowo",
@@ -294,6 +438,6 @@ Wzdłuż klifu wiedzie nadmorska trasa spacerowa do Sopotu. Idąc szczytem skarp
 
 	Gdy wybuchła II wojna światowa Gdynia, po trwającej do 19 września 1939 roku obronie przed wojskami niemieckimi, została zajęta i przemianowana na Gotenhafen, zaś port gdyński stał się bazą Kriegsmarine, która na skutek bombardowań (największy nalot miał miejsce w nocy 18/19 grudnia 1944 roku; wzięło w nim udział około 600 samolotów RAF-u) i ostrzału w ramach operacji pomorskiej Armii Czerwonej w marcu 1945 roku uległa kompletnemu zniszczeniu`,
       coordinates: [54.521349, 18.529481]
-    },
+    }
   ]
 };
