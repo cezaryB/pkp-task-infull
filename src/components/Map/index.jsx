@@ -1,17 +1,29 @@
 import React from "react";
 import MapboxService from "../../features/map/map.service";
+import UserPointerService from "../../features/map/user-pointer.service";
 import applyMarkers from '../../features/map/apply.markers';
 import idea from '../../resources/idea.svg';
 import "./index.scss";
-
-import UserPointerService from "../../features/map/user-pointer.service";
+import Modal from '../Modal';
 
 let map;
 
 class Map extends React.Component {
+  state = {
+    modalVisible: false,
+    markerSelected: '',
+  };
+
   async componentDidMount() {
     map = await MapboxService.bootstrapMap();
-    applyMarkers(map, idea);
+    applyMarkers(map, idea, this.handleMarkerClick);
+  }
+
+  handleMarkerClick = (markerName) => {
+    this.setState({
+      modalVisible: true,
+      markerSelected: markerName,
+    })
   }
 
   moveMap = newCoords => {
@@ -28,7 +40,13 @@ class Map extends React.Component {
   }
 
   render() {
-    return <div id="map" />;
+    const { modalVisible, markerSelected } = this.state;
+    return (
+      <React.Fragment>
+        <div id="map" />
+        {modalVisible && <Modal markerSelected={markerSelected} closeModal={() => this.setState({ modalVisible: false })} />}
+      </React.Fragment>
+    );
   }
 }
 
