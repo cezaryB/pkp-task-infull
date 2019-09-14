@@ -72,13 +72,13 @@ class UserPointerService {
           0,
           Math.PI * 2
         );
-        context.fillStyle = "rgba(255, 200, 200," + (1 - t) + ")";
+        context.fillStyle = "rgba(13, 66, 125," + (1 - t) + ")";
         context.fill();
 
         // draw inner circle
         context.beginPath();
         context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-        context.fillStyle = "rgba(255, 100, 100, 1)";
+        context.fillStyle = "rgba(245, 130, 32, 1)";
         context.strokeStyle = "white";
         context.lineWidth = 2 + 4 * (1 - t);
         context.fill();
