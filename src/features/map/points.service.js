@@ -1,6 +1,5 @@
 import mapboxgl from "mapbox-gl";
-import PointsFactory from "./points.factory";
-
+import { data } from "../../data/data";
 class PointsService {
   addPlacesToMap(map) {
     // Add a layer showing the places.
@@ -11,7 +10,7 @@ class PointsService {
         type: "geojson",
         data: {
           type: "FeatureCollection",
-          features: PointsFactory.getPoints()
+          features: data.points
         }
       },
       layout: {
