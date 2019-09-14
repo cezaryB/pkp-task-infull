@@ -11,12 +11,17 @@ class Map extends React.Component {
     map = await MapboxService.bootstrapMap();
   }
 
+  moveMap = newCoords => {
+    UserPointerService.movePointer(map, newCoords);
+    map.setCenter(newCoords);
+  };
+
   componentDidUpdate() {
     const newCoords = [
       this.props.pointerPosition.latitude,
       this.props.pointerPosition.longitude
     ];
-    return UserPointerService.movePointer(map, newCoords);
+    return this.moveMap(newCoords);
   }
 
   render() {
