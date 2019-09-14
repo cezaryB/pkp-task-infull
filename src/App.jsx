@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import HomeScreen from './screens/Home';
-
-
+import SignInScreen from './screens/SignInScreen';
+import MapScreen from './screens/MapScreen';
 
 function App() {
   return (
     <Router>
-      <Route path='/' component={HomeScreen} />
+      <Route exact path='/' component={SignInScreen} />
+      <Route path='/journey' component={MapScreen} />
     </Router>
   );
 }
