@@ -6,7 +6,10 @@ class Ticket extends React.Component {
     modalVisible: true,
     ticket: {
       origin: "Warszawa Centralna",
-      destination: "Gdynia Główna"
+      destination: "Gdynia Główna",
+      user: {
+        name: "Cezary Burzykowski"
+      }
     }
   };
 
@@ -20,7 +23,7 @@ class Ticket extends React.Component {
             closeModal={() => this.setState({ modalVisible: false })}
           >
             <div>
-              <h1>Witaj na pokladzie pociągu PKP</h1>
+              <h1>Witaj {ticket.user.name} na pokladzie pociągu PKP</h1>
               <h2>Twoja podróż:</h2>
               <p>
                 {ticket.origin} do {ticket.destination}
