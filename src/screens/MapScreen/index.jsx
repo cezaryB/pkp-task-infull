@@ -1,8 +1,7 @@
 import React from "react";
-import ExampleComponent from "../../components/ExampleComponent";
 import Map from "../../components/Map";
 
-const HomeScreen = props => {
+const MapScreen = props => {
   return (
     <div>
       <Map />
@@ -10,4 +9,4 @@ const HomeScreen = props => {
   );
 };
 
-export default HomeScreen;
+export default MapScreen;
