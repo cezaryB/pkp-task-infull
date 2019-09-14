@@ -1,5 +1,5 @@
 export const data = {
-  lines: [    
+  lines: [
     { latitude: 21.003181, longitude: 52.228798 },
     { latitude: 21.052097, longitude: 52.25178 },
     { latitude: 20.94043, longitude: 52.401687 },
@@ -32,7 +32,8 @@ export const data = {
   points: [
     {
       name: "Warszawa Centralna",
-      img: "",
+      img:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4nfu20JTOw5g5LWRX36WaNTUyD6p1UdX3vrEZAzYuvxaYcRxgzw",
       description: `Zespół Stacji Filtrów w Warszawie  – filtry wody znajdujące się przy ul. Koszykowej 81. Zajmują teren między ulicami: Koszykową, Krzywickiego, Filtrową i Raszyńską.
 
       Zespół jest częścią systemu wodociągów warszawskich wybudowanych w latach 1883–1886 z inicjatywy prezydenta miasta Sokratesa Starynkiewicza według projektu Williama Lindleya i Williama Heerleina Lindleya. W kolejnych latach został on rozbudowywany i uzupełniony o nowe obiekty. Obecnie jest częścią Zakładu Centralnego Miejskiego Przedsiębiorstwa Wodociągów i Kanalizacji.
