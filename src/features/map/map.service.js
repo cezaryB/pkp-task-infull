@@ -19,7 +19,7 @@ class MapboxService {
             container: "map",
             style: "mapbox://styles/mapbox/streets-v11",
             center: center,
-            zoom: 15
+            zoom: 9
           });
           map.on("load", async () => {
             pointsService.addPlacesToMap(map);
