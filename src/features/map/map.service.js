@@ -23,7 +23,7 @@ class MapboxService {
           });
           map.on("load", async () => {
             pointsService.addPlacesToMap(map);
-            lineService.addLine(map);
+            lineService.addLines(map);
             await userPointerService.addUserPointerToMap(map);
           });
           return map;
