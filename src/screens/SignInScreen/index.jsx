@@ -1,8 +1,15 @@
 import React from 'react';
-import SignIn from '../../components/SignIn';
+import SignInContainer from '../../components/SignInContainer';
+import Navigation from '../../components/Navigation';
+import Logo from '../../components/Logo';
 
 const SignInScreen = () => {
-  return <SignIn />;
+  return (
+    <SignInContainer>
+      <Logo />
+      <Navigation />
+    </SignInContainer>
+  );
 }
 
 export default SignInScreen;
