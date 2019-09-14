@@ -41,6 +41,72 @@ export const data = {
       W latach 1973 i 2008 większość obiektów znajdujących się na terenie Zespołu Stacji Filtrów została wpisana do rejestru zabytków. W 2012 cały kompleks został uznany za pomnik historii
       `,
       coordinates: [21.003181, 52.228853]
-    }
+    },
+    {
+      coordinates: [52.221602, 20.995342]
+    },
+    {
+      coordinates: [52.258074, 21.021649]
+    },
+    {
+      coordinates: [52.407125, 20.938933]
+    },
+    {
+      coordinates: [52.439665, 20.674136]
+    },
+    {
+      coordinates: [52.703462, 21.085439]
+    },
+    {
+      coordinates: [52.867924, 20.611483]
+    },
+    {
+      coordinates: [53.115918, 20.380097]
+    },
+    {
+      coordinates: [53.331564, 19.774573]
+    },
+    {
+      coordinates: [53.486971, 20.120682]
+    },
+    {
+      coordinates: [53.366791, 19.392499]
+    },
+    {
+      coordinates: [53.602022, 19.565212]
+    },
+    {
+      coordinates: [53.727937, 18.931408]
+    },
+    {
+      coordinates: [54.039264, 19.031663]
+    },
+    {
+      coordinates: [54.165708, 19.396496]
+    },
+    {
+      coordinates: [54.259776, 18.645942]
+    },
+    {
+      coordinates: [54.350879, 18.650542]
+    },
+    {
+      coordinates: [54.370598, 18.654809]
+    },
+    {
+      coordinates: [54.410585, 18.592430]
+    },
+    {
+      coordinates: [54.425992, 18.598459]
+    },
+    {
+      coordinates: [54.447106, 18.573507]
+    },
+    {
+      coordinates: [54.485434, 18.568893]
+    },
+    {
+      coordinates: [54.521349, 18.529481]
+    },
   ]
 };
