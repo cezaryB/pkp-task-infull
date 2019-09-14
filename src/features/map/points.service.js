@@ -10,7 +10,23 @@ class PointsService {
         type: "geojson",
         data: {
           type: "FeatureCollection",
-          features: data.points
+          features: data.points.map(point => {
+            return {
+              type: "Feature",
+              properties: {
+                description: `<strong>${point.name}</strong>
+                <img src="${point.img}" />
+                <p>${point.description}</p>`,
+                'marker-color': '#3bb2d0',
+                'marker-size': 'large',
+                'marker-symbol': 'rocket'
+              },
+              geometry: {
+                type: "Point",
+                coordinates: point.coordinates
+              }
+            };
+          })
         }
       },
       layout: {
