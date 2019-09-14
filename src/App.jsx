@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AppState from './context';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import './index.scss';
 import SignInScreen from './screens/SignInScreen';
 import MapScreen from './screens/MapScreen';
 
