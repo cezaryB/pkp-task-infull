@@ -1,10 +1,14 @@
 import React from "react";
 import "./index.scss";
 
-const Zip = () => {
+const Zip = (props) => {
   const [zipValue, setZipValue] = React.useState(0);
 
-  const handleChange = () => e => setZipValue(e.target.value);
+  const handleChange = () => e => {
+    const value = 
+    setZipValue(e.target.value);
+    props.handleCurrentPosition(e.target.value)
+  };
 
   return (
     <div className="zip_container">
