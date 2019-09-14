@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Map from "../../components/Map";
 import Zip from "../../components/Zip";
-import Navigation from '../../components/Navigation';
+import Navigation from "../../components/Navigation";
 
 // Points on map data
 import { data } from "../../data/data";
+import Ticket from "../../components/Ticket";
 
 const MapScreen = props => {
   const [pointerPosition, setPointerPosition] = useState(data.lines[0]);
@@ -17,6 +18,7 @@ const MapScreen = props => {
   return (
     <div className="map-container">
       <Navigation fixedPosition />
+      <Ticket></Ticket>
       <Map pointerPosition={pointerPosition} />
       <Zip handleCurrentPosition={handleCurrentPosition} />
     </div>
