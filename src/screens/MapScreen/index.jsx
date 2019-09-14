@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Map from "../../components/Map";
 import Zip from "../../components/Zip";
 import Navigation from '../../components/Navigation';
@@ -7,11 +7,10 @@ import Navigation from '../../components/Navigation';
 import { data } from "../../data/data";
 
 const MapScreen = props => {
-  const [pointerPosition, setPointerPosition] = React.useState(data.lines[0]);
+  const [pointerPosition, setPointerPosition] = useState(data.lines[0]);
 
   const handleCurrentPosition = value => {
     const mapPoints = data.lines;
-
     setPointerPosition(mapPoints[value]);
   };
 

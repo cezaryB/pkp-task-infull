@@ -1,0 +1,28 @@
+.modal {
+  position: fixed;
+  top: 15%;
+  left: 2%;
+  right: 2%;
+  bottom: 15%;
+  padding: 20px 15px;
+  background: white;
+  overflow: scroll;
+
+  &__image {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    font-size: 15px;
+    margin: 20px 0;
+  }
+
+  &__controls {
+    display: flex;
+
+    button:nth-of-type(n + 2) {
+      margin-left: 10px;
+    }
+  }
+}
