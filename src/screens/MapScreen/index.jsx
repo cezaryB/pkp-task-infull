@@ -16,51 +16,7 @@ const MapScreen = () => {
 
   const handleCurrentPosition = value => {
     const mapPoints = data.lines;
-    const oldPoint = pointerPosition;
-    const destination = mapPoints[value];
-
-    // Animated traveling
-    // let i = 0;
-    // const oldPointIndex = mapPoints.findIndex(
-    //   el =>
-    //     oldPoint.latitude === el.latitude && oldPoint.longitude === el.longitude
-    // );
-
-    // const stops = mapPoints.slice(oldPointIndex, value - oldPointIndex);
-    // for(let d = 0; d < stops.length - 1; d++) {
-    //   const stop = stops[d];
-    //   const nextStop = stops[d+1];
-    //   let next = stop;
-
-    //   do {
-    //     next = nextPoint(next, nextStop);
-    //     setTimeout(next => setPointerPosition(next), i * 250, next);
-    //     i++;
-    //   } while (next !== nextStop);
-    // };
-    setPointerPosition(destination);
-  };
-
-  const nextPoint = (current, destination) => {
-    const speed_per_tick = 0.0005;
-    const delta = {};
-    let result = {};
-    delta.latitude = destination.latitude - current.latitude;
-    delta.longitude = destination.longitude - current.longitude;
-    const destinationDistance = Math.sqrt(
-      delta.latitude * delta.latitude + delta.longitude * delta.longitude
-    );
-    if (destinationDistance > speed_per_tick) {
-      const ratio = speed_per_tick / destinationDistance;
-      const latitude_move = ratio * delta.latitude;
-      const longitude_move = ratio * delta.longitude;
-      result.latitude = latitude_move + current.latitude;
-      result.longitude = longitude_move + current.longitude;
-    } else {
-      result = destination;
-    }
-
-    return result;
+    setPointerPosition(mapPoints[value]);
   };
 
   const handleUpdatingPointerPosition = useCallback(markerName => {
