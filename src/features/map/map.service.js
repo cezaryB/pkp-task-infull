@@ -8,6 +8,8 @@ import { data } from "../../data/data";
 
 class MapboxService {
   async bootstrapMap() {
+    // You don't see this
+    // ToDo need to be moved to env variables, because of lack of environments we kept it static.
     mapboxgl.accessToken =
       "pk.eyJ1Ijoic2lrb3JhMDAiLCJhIjoiY2swaHN3Z2duMDA1dTNlcDk3Y3p5cjNmNCJ9.5hTW49VqwphtDGMdE-SwEg";
 
