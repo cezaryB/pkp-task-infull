@@ -1,4 +1,4 @@
-# PKP Game - inFullMobile Team
+# PKP Game - FourMs&C Team
 
 ## Requirements
 
@@ -11,3 +11,8 @@
 ## Launch
 
 `$ npm start`
+
+### Login Screen Credentials
+- Login: `admin`
+- Password: `Admin1?`
+- Ticket Number: `123454321`
