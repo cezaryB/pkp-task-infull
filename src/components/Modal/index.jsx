@@ -5,10 +5,19 @@ import "./index.scss";
 
 import Quiz from "../Quiz";
 
-const Modal = ({ markerSelected, closeModal, children, addQuizPoints }) => {
+const Modal = ({
+  markerSelected,
+  closeModal,
+  children,
+  addQuizPoints,
+  resolvedQuizes,
+  currentModalQuizPoints
+}) => {
   const [showMore, setShowMore] = useState(false);
   const [showQuiz, setShowQuiz] = useState(false);
-  const [quizPoints, setQuizPoints] = useState(0);
+  const [quizPoints, setQuizPoints] = useState(
+    currentModalQuizPoints ? currentModalQuizPoints.quizPoints : 0
+  );
   const [quizButtonDisabled, setDisableQuizButton] = useState(false);
 
   const currentMarkerData = useMemo(() => {
@@ -33,8 +42,11 @@ const Modal = ({ markerSelected, closeModal, children, addQuizPoints }) => {
   const handleQuizPoints = quizPoints => {
     setQuizPoints(quizPoints);
     setDisableQuizButton(true);
-    addQuizPoints(quizPoints);
+    addQuizPoints(quizPoints, currentMarkerData.name);
   };
+
+  const checkToQuizIsResolved = quiz =>
+    quiz.quizName === currentMarkerData.name;
 
   const renderQuiz = useCallback(() => {
     return (
@@ -47,6 +59,8 @@ const Modal = ({ markerSelected, closeModal, children, addQuizPoints }) => {
   }, [children]);
 
   const renderMarkersInfo = useCallback(() => {
+    const quizResolved =
+      quizButtonDisabled || resolvedQuizes.some(checkToQuizIsResolved);
     return (
       <React.Fragment>
         <h2>{currentMarkerData.name}</h2>
@@ -63,9 +77,9 @@ const Modal = ({ markerSelected, closeModal, children, addQuizPoints }) => {
             <Button
               onClick={() => setShowQuiz(true)}
               variant="contained"
-              disabled={quizButtonDisabled}
+              disabled={quizResolved}
               style={{
-                backgroundColor: quizButtonDisabled ? "green" : "#ff9966",
+                backgroundColor: quizResolved ? "green" : "#ff9966",
                 color: "white"
               }}
             >
@@ -91,7 +105,7 @@ const Modal = ({ markerSelected, closeModal, children, addQuizPoints }) => {
     showMore,
     currentMarkerData,
     quizPoints,
-    quizButtonDisabled
+    quizButtonDisabled,
   ]);
 
   return (

@@ -12,7 +12,8 @@ class Map extends React.Component {
   state = {
     modalVisible: false,
     markerSelected: "",
-    quizPoints: 0
+    quizPoints: 0,
+    resolvedQuizes: []
   };
 
   async componentDidMount() {
@@ -45,13 +46,19 @@ class Map extends React.Component {
     }
   }
 
-  addQuizPoints = quizPoints =>
+  addQuizPoints = (quizPoints, quizName) =>
     this.setState(state => ({
-      quizPoints: state.quizPoints + quizPoints
+      quizPoints: state.quizPoints + quizPoints,
+      resolvedQuizes: [...state.resolvedQuizes, { quizName, quizPoints }]
     }));
 
+  getCurrentQuizPoints = () =>
+    this.state.resolvedQuizes.find(quiz =>
+      quiz.quizName === this.state.markerSelected
+    );
+
   render() {
-    const { modalVisible, markerSelected } = this.state;
+    const { modalVisible, markerSelected, resolvedQuizes } = this.state;
     return (
       <React.Fragment>
         <div id="map" />
@@ -59,6 +66,8 @@ class Map extends React.Component {
           <Modal
             markerSelected={markerSelected}
             addQuizPoints={this.addQuizPoints}
+            resolvedQuizes={resolvedQuizes}
+            currentModalQuizPoints={this.getCurrentQuizPoints()}
             closeModal={() => this.setState({ modalVisible: false })}
           />
         )}
