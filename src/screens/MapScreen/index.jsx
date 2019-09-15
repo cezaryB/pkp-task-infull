@@ -85,7 +85,7 @@ const MapScreen = () => {
         <span className="modal__success-tag">15%</span>
       </div>
     );
-  }, [userPoints]);
+  }, []);
 
   const renderNegativeFeedback = useCallback(() => {
     return (
@@ -94,7 +94,7 @@ const MapScreen = () => {
         <p>Ciągle brakuje Ci kilku punktów do odblokowania nagrody</p>
       </div>
     );
-  }, [userPoints]);
+  }, []);
 
   return (
     <div className="map-container">
