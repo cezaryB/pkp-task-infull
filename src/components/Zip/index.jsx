@@ -17,7 +17,7 @@ const Zip = props => {
   return (
     <div className="zip_container">
       <Slider onChange={handleChange} value={zipValue} min={0} max={numberOfMapPoints} />
-      <label className="zip_label">Move train</label>
+      <label className="zip_label">Trasa</label>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const Modal = ({ markerSelected, closeModal, children, addQuizPoints }) => {
     return (
       <div className="modal__content">
         {children}
-        <Button variant="contained" onClick={closeModal}>
+        <Button variant="contained" onClick={closeModal} style={{ display: 'block', margin: '0 auto' }}>
           Zamknij
         </Button>
       </div>
