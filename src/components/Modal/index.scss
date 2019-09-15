@@ -31,6 +31,22 @@
     margin-top: 40px;
   }
 
+  &__success {
+    margin-bottom: 30%;
+  }
+
+  &__success-tag {
+    display: inline-block;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: #52F3A0;
+    color: white;
+  }
+
+  &__failure {
+    margin-bottom: 50%;
+  }
+
   &__controls {
     display: flex;
 
