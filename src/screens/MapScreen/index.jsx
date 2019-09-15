@@ -17,7 +17,6 @@ const MapScreen = () => {
   const handleCurrentPosition = value => {
     const mapPoints = data.lines;
     const oldPoint = pointerPosition;
-    const destination = mapPoints[value];
     let i = 0;
     const oldPointIndex = mapPoints.findIndex(
       el =>
