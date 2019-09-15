@@ -6,9 +6,16 @@ import Navigation from "../../components/Navigation";
 import "./index.scss";
 
 const SignInScreen = ({ history: { push } }) => {
-  const { ticketNumber, setTicketNumber } = useContext(AppState);
+  const {
+    ticketNumber,
+    setTicketNumber,
+    login,
+    setLogin,
+    password,
+    setPassword
+  } = useContext(AppState);
   const handleSubmit = useCallback(() => {
-    if (ticketNumber) {
+    if ((ticketNumber, login, password)) {
       push("/journey");
     }
   }, [ticketNumber]);
@@ -20,8 +27,8 @@ const SignInScreen = ({ history: { push } }) => {
         <TextField
           id="outline-required"
           label="Login"
-          value={ticketNumber}
-          onChange={e => setTicketNumber(e.target.value)}
+          value={login}
+          onChange={e => setLogin(e.target.value)}
           margin="normal"
           variant="filled"
           style={{ width: "100%" }}
@@ -30,8 +37,8 @@ const SignInScreen = ({ history: { push } }) => {
           type={"password"}
           id="outline-required"
           label="Hasło"
-          value={ticketNumber}
-          onChange={e => setTicketNumber(e.target.value)}
+          value={password}
+          onChange={e => setPassword(e.target.value)}
           margin="normal"
           variant="filled"
           style={{ width: "100%" }}
