@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Map from "../../components/Map";
 import Zip from "../../components/Zip";
 import Navigation from "../../components/Navigation";
@@ -12,11 +12,37 @@ const MapScreen = () => {
   const [pointerPosition, setPointerPosition] = useState(data.lines[0]);
   const [showProfile, setShowProfile] = useState(false);
   const [userPoints, setUserPoints] = useState(0)
+  const maxQuizPoints = 9;
 
   const handleCurrentPosition = value => {
     const mapPoints = data.lines;
     setPointerPosition(mapPoints[value]);
   };
+
+  const renderPositiveFeedback = useCallback(() => {
+    return (
+      <div className='modal__success'>
+        <h3>Gratulujemy!</h3>
+        <p>
+          Odpowiedziałeś na ponad połowę pytań pozytywnie.
+          Odblokowałeś zniżkę w Warsie:
+        </p>
+        <span className='modal__success-tag'>15%</span>
+      </div>
+    );
+  }, [userPoints])
+
+
+  const renderNegativeFeedback = useCallback(() => {
+    return (
+      <div className='modal__failure'>
+        <h3>Graj dalej!</h3>
+        <p>
+          Ciągle brakuje Ci kilku punktów do odblokowania nagrody
+        </p>
+      </div>
+    );
+  }, [userPoints])
 
   return (
     <div className="map-container">
@@ -29,8 +55,18 @@ const MapScreen = () => {
         &&
         <Modal closeModal={() => setShowProfile(false)}>
           <h1>
-            Liczba punktów zdobytych w quizach: {userPoints}
+            Liczba punktów zdobytych w quizach:
           </h1>
+          <h2>
+            {userPoints} / {maxQuizPoints}
+          </h2>
+          <div className='modal__summary'>
+            {
+              userPoints > Math.floor(maxQuizPoints / 2) ?
+                renderPositiveFeedback() :
+                renderNegativeFeedback()
+            }
+          </div>
         </Modal>
       }
     </div>
