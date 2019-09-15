@@ -18,7 +18,7 @@ const SignInScreen = ({ history: { push } }) => {
     if ((ticketNumber, login, password)) {
       push("/journey");
     }
-  }, [ticketNumber]);
+  }, [ticketNumber, push]);
 
   return (
     <div className="sign-in">

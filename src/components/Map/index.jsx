@@ -32,12 +32,17 @@ class Map extends React.Component {
     map.setCenter(newCoords);
   };
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     const newCoords = [
       this.props.pointerPosition.latitude,
       this.props.pointerPosition.longitude
     ];
-    return this.moveMap(newCoords);
+
+    this.moveMap(newCoords);
+
+    if (prevState.quizPoints !== this.state.quizPoints) {
+      this.props.updateUserPoints(this.state.quizPoints);
+    }
   }
 
   addQuizPoints = quizPoints =>

@@ -64,7 +64,10 @@ const Modal = ({ markerSelected, closeModal, children, addQuizPoints }) => {
               onClick={() => setShowQuiz(true)}
               variant="contained"
               disabled={quizButtonDisabled}
-              style={{ backgroundColor: "#ff9966", color: "white" }}
+              style={{
+                backgroundColor: quizButtonDisabled ? "green" : "#ff9966",
+                color: "white"
+              }}
             >
               Quiz ({quizPoints}/{currentMarkerData.quiz.length})
             </Button>
