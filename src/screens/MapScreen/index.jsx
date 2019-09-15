@@ -11,12 +11,8 @@ import Ticket from "../../components/Ticket";
 const MapScreen = () => {
   const [pointerPosition, setPointerPosition] = useState(data.lines[0]);
   const [showProfile, setShowProfile] = useState(false);
-<<<<<<< HEAD
   const [userPoints, setUserPoints] = useState(0)
   const maxQuizPoints = 9;
-=======
-  const [userPoints, setUserPoints] = useState(0);
->>>>>>> animations
 
   const handleCurrentPosition = value => {
     const mapPoints = data.lines;
@@ -110,7 +106,6 @@ const MapScreen = () => {
       <Zip handleCurrentPosition={handleCurrentPosition} />
       {showProfile && (
         <Modal closeModal={() => setShowProfile(false)}>
-<<<<<<< HEAD
           <h1>
             Liczba punktów zdobytych w quizach:
           </h1>
@@ -124,9 +119,6 @@ const MapScreen = () => {
                 renderNegativeFeedback()
             }
           </div>
-=======
-          <h1>Liczba punktów zdobytych w quizach: {userPoints}</h1>
->>>>>>> animations
         </Modal>
       )}
     </div>
