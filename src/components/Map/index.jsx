@@ -26,6 +26,8 @@ class Map extends React.Component {
       modalVisible: true,
       markerSelected: markerName
     });
+
+    this.props.updatePosition(markerName);
   };
 
   moveMap = newCoords => {
@@ -33,7 +35,7 @@ class Map extends React.Component {
     map.setCenter(newCoords);
   };
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(_, prevState) {
     const newCoords = [
       this.props.pointerPosition.latitude,
       this.props.pointerPosition.longitude

@@ -19,6 +19,15 @@ const MapScreen = () => {
     setPointerPosition(mapPoints[value]);
   };
 
+  const handleUpdatingPointerPosition = useCallback((markerName) => {
+    const currentSelectedMarker = data.points.find(point => point.name === markerName);
+
+    setPointerPosition({
+      latitude: currentSelectedMarker.coordinates[1],
+      longitude: currentSelectedMarker.coordinates[0],
+    });
+  }, [])
+
   const renderPositiveFeedback = useCallback(() => {
     return (
       <div className='modal__success'>
@@ -48,7 +57,11 @@ const MapScreen = () => {
     <div className="map-container">
       <Navigation fixedPosition showProfile={() => setShowProfile(true)} />
       <Ticket />
-      <Map pointerPosition={pointerPosition} updateUserPoints={setUserPoints} />
+      <Map
+        pointerPosition={pointerPosition}
+        updateUserPoints={setUserPoints}
+        updatePosition={handleUpdatingPointerPosition}
+      />
       <Zip handleCurrentPosition={handleCurrentPosition} />
       {
         showProfile
