@@ -18,14 +18,13 @@ const SignInScreen = ({ history: { push } }) => {
     if ((ticketNumber, login, password)) {
       push("/journey");
     }
-  }, [ticketNumber, push]);
+  }, [ticketNumber, push, login, password]);
 
   return (
     <div className="sign-in">
       <Navigation />
       <form className="sign-in__form">
         <TextField
-          id="outline-required"
           label="Login"
           value={login}
           onChange={e => setLogin(e.target.value)}
@@ -35,7 +34,6 @@ const SignInScreen = ({ history: { push } }) => {
         />
         <TextField
           type={"password"}
-          id="outline-required"
           label="Hasło"
           value={password}
           onChange={e => setPassword(e.target.value)}
@@ -44,7 +42,6 @@ const SignInScreen = ({ history: { push } }) => {
           style={{ width: "100%" }}
         />
         <TextField
-          id="outline-required"
           label="Numer biletu"
           value={ticketNumber}
           onChange={e => setTicketNumber(e.target.value)}

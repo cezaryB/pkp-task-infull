@@ -11,7 +11,7 @@ import Ticket from "../../components/Ticket";
 const MapScreen = () => {
   const [pointerPosition, setPointerPosition] = useState(data.lines[0]);
   const [showProfile, setShowProfile] = useState(false);
-  const [userPoints, setUserPoints] = useState(0)
+  const [userPoints, setUserPoints] = useState(0);
   const maxQuizPoints = 9;
 
   const handleCurrentPosition = value => {
@@ -19,39 +19,38 @@ const MapScreen = () => {
     setPointerPosition(mapPoints[value]);
   };
 
-  const handleUpdatingPointerPosition = useCallback((markerName) => {
-    const currentSelectedMarker = data.points.find(point => point.name === markerName);
+  const handleUpdatingPointerPosition = useCallback(markerName => {
+    const currentSelectedMarker = data.points.find(
+      point => point.name === markerName
+    );
 
     setPointerPosition({
       latitude: currentSelectedMarker.coordinates[1],
-      longitude: currentSelectedMarker.coordinates[0],
+      longitude: currentSelectedMarker.coordinates[0]
     });
-  }, [])
+  }, []);
 
   const renderPositiveFeedback = useCallback(() => {
     return (
-      <div className='modal__success'>
+      <div className="modal__success">
         <h3>Gratulujemy!</h3>
         <p>
-          Odpowiedziałeś na ponad połowę pytań pozytywnie.
-          Odblokowałeś zniżkę w Warsie:
+          Odpowiedziałeś na ponad połowę pytań pozytywnie. Odblokowałeś zniżkę w
+          Warsie:
         </p>
-        <span className='modal__success-tag'>15%</span>
+        <span className="modal__success-tag">15%</span>
       </div>
     );
-  }, [userPoints])
-
+  }, []);
 
   const renderNegativeFeedback = useCallback(() => {
     return (
-      <div className='modal__failure'>
+      <div className="modal__failure">
         <h3>Graj dalej!</h3>
-        <p>
-          Ciągle brakuje Ci kilku punktów do odblokowania nagrody
-        </p>
+        <p>Ciągle brakuje Ci kilku punktów do odblokowania nagrody</p>
       </div>
     );
-  }, [userPoints])
+  }, []);
 
   return (
     <div className="map-container">
@@ -63,25 +62,19 @@ const MapScreen = () => {
         updatePosition={handleUpdatingPointerPosition}
       />
       <Zip handleCurrentPosition={handleCurrentPosition} />
-      {
-        showProfile
-        &&
+      {showProfile && (
         <Modal closeModal={() => setShowProfile(false)}>
-          <h1>
-            Liczba punktów zdobytych w quizach:
-          </h1>
+          <h1>Liczba punktów zdobytych w quizach:</h1>
           <h2>
             {userPoints} / {maxQuizPoints}
           </h2>
-          <div className='modal__summary'>
-            {
-              userPoints > Math.floor(maxQuizPoints / 2) ?
-                renderPositiveFeedback() :
-                renderNegativeFeedback()
-            }
+          <div className="modal__summary">
+            {userPoints > Math.floor(maxQuizPoints / 2)
+              ? renderPositiveFeedback()
+              : renderNegativeFeedback()}
           </div>
         </Modal>
-      }
+      )}
     </div>
   );
 };

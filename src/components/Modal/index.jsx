@@ -30,25 +30,25 @@ const Modal = ({
     return (
       <div className="modal__content">
         {children}
-        <Button variant="contained" onClick={closeModal} style={{ display: 'block', margin: '0 auto' }}>
+        <Button
+          variant="contained"
+          onClick={closeModal}
+          style={{ display: "block", margin: "0 auto" }}
+        >
           Zamknij
         </Button>
       </div>
     );
-  }, [children]);
+  }, [children, closeModal]);
 
   const handleExitQuizModal = () => setShowQuiz(false);
 
-  const handleQuizPoints = quizPoints => {
-    setQuizPoints(quizPoints);
-    setDisableQuizButton(true);
-    addQuizPoints(quizPoints, currentMarkerData.name);
-  };
-
-  const checkToQuizIsResolved = quiz =>
-    quiz.quizName === currentMarkerData.name;
-
   const renderQuiz = useCallback(() => {
+    const handleQuizPoints = quizPoints => {
+      setQuizPoints(quizPoints);
+      setDisableQuizButton(true);
+      addQuizPoints(quizPoints, currentMarkerData.name);
+    };
     return (
       <Quiz
         data={currentMarkerData.quiz}
@@ -56,9 +56,11 @@ const Modal = ({
         handleQuizPoints={handleQuizPoints}
       />
     );
-  }, [children]);
+  }, [currentMarkerData, addQuizPoints]);
 
   const renderMarkersInfo = useCallback(() => {
+    const checkToQuizIsResolved = quiz =>
+      quiz.quizName === currentMarkerData.name;
     const quizResolved =
       quizButtonDisabled || resolvedQuizes.some(checkToQuizIsResolved);
     return (
@@ -101,11 +103,12 @@ const Modal = ({
       </React.Fragment>
     );
   }, [
-    markerSelected,
     showMore,
     currentMarkerData,
     quizPoints,
     quizButtonDisabled,
+    closeModal,
+    resolvedQuizes
   ]);
 
   return (
